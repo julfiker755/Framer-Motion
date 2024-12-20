@@ -8,12 +8,12 @@ import Varients from './components/1.6 Varients';
 
 const App = () => {
   return (
-    <div className='w-11/12 lg:max-w-7xl m-auto py-2'>
-      {/* <Simpe></Simpe> */}
-      {/* <Keyframes></Keyframes> */}
-      {/* <Button></Button> */}
-      {/* <Text></Text> */}
-      {/* <Trasitiontype></Trasitiontype> */}
+    <div className='w-11/12 lg:max-w-7xl space-y-10 m-auto py-2'>
+      <Simpe></Simpe> 
+      <Keyframes></Keyframes> 
+       <Button></Button> 
+      <Text></Text> 
+      <Trasitiontype></Trasitiontype> 
       <Varients></Varients>
     </div>
    
