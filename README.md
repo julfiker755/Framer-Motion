@@ -121,3 +121,23 @@ const Trasitiontype= () => {
 
 export default Trasitiontype;
 ```
+```js
+import { motion, useMotionValue, useTransform, animate } from "motion/react";
+import { useEffect } from "react";
+
+export default function App() {
+  const count = useMotionValue(0);
+  const roundedValue = useTransform(count, Math.round);
+  useEffect(() => {
+    const animation1 = animate(count, 20, { duration: 5 });
+    return animation1.stop;
+  }, [count]);
+  return (
+    <div className="text-3xl container m-auto mt-2">
+      <motion.div className="text-xl border rounded-md grid place-items-center border-gray-400 size-20">
+        {roundedValue}
+      </motion.div>
+    </div>
+  );
+}
+```
