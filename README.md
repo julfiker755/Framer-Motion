@@ -141,3 +141,46 @@ export default function App() {
   );
 }
 ```
+```js
+import { motion } from "motion/react";
+
+const Box = ({ text }: { text: string }) => {
+  return (
+    <motion.div
+      className="size-40 flex items-center justify-center border border-gray-400 bg-pink-500 text-white"
+      initial={{ opacity: 0, x: -50 }}
+      whileInView={{
+        opacity: 1,
+        x: 0,
+        transition: {
+          duration: 1,
+        },
+      }}
+      viewport={{ once: true }}
+    >
+      {text}
+    </motion.div>
+  );
+};
+
+export default function App() {
+  const greeting = [
+    "Hello",
+    "Boss",
+    "Bangladesh",
+    "Best",
+    "Hello",
+    "Boss",
+    "Bangladesh",
+    "Best",
+  ];
+  return (
+    <div className="text-3xl container space-y-2 m-aut0">
+      {greeting.map((item, idx) => (
+        <Box key={idx} text={item} />
+      ))}
+    </div>
+  );
+}
+
+```
